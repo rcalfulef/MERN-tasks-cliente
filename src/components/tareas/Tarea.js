@@ -15,7 +15,7 @@ const Tarea = ({tarea}) => {
 
     const tareaEliminar = id => {
         eliminarTarea(id, proyectoActual._id);
-        obtenerTareas(proyectoActual.id);
+        obtenerTareas(proyectoActual._id);
     }
 
     const cambiarEstado = tarea => {
@@ -50,7 +50,6 @@ const Tarea = ({tarea}) => {
                             className='incompleto'
                             onClick={() => cambiarEstado(tarea)}
                         >Incompleto</button>
-
                 )
             }
             </div>
